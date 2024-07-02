@@ -1,0 +1,35 @@
+<!-- EmailJS SDK -->
+<!-- JavaScript to handle form submission -->
+<script>
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+  
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            mobile_number: document.getElementById('mobile_number').value,
+            company_name: document.getElementById('company_name').value,
+            district: document.getElementById('district').value,
+            equipment_details: document.getElementById('equipment_details').value,
+            requirements: document.getElementById('requirements').value
+        };
+  
+        // Send form data via EmailJS
+        emailjs.send('service_zdrsnov', 'template_vkh9jln', formData)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Your form has been submitted successfully!');
+            }, function(error) {
+                console.error('FAILED...', error);
+                alert('There was an error submitting your form. Please try again.');
+            });
+  
+        // Send form data via WhatsApp
+        const whatsappNumber = "8338438413";
+        const whatsappMessage = `Name: ${formData.name}\nEmail: ${formData.email}\nMobile Number: ${formData.mobile_number}\nCompany Name: ${formData.company_name}\nDistrict: ${formData.district}\nEquipment Details: ${formData.equipment_details}\nRequirements: ${formData.requirements}`;
+        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+  
+        // Open WhatsApp with pre-filled message
+        window.open(whatsappURL, '_blank');
+    });
+  </script>
