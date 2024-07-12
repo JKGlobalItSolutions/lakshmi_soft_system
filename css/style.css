@@ -706,3 +706,29 @@
   
   
 /* book now button start */
+/* dropdown new start */
+  
+/* Default styles */
+
+.dropdown-menu {
+    overflow-y: hidden; /* Hide vertical scrollbar by default */
+}
+
+.dropdown-menu .row {
+    margin-bottom: 10px; /* Add margin between rows of items */
+}
+
+.dropdown-item {
+    padding: 0.5rem 1rem; /* Adjust padding for better spacing */
+}
+
+/* Media query for tablets and smaller screens */
+@media (max-width: 991.98px) {
+    .dropdown-menu {
+        max-height: 300px; /* Set a maximum height for the dropdown menu */
+        overflow-y: auto; /* Enable vertical scrolling */
+    }
+}
+
+
+/* dropdown new end */
