@@ -732,3 +732,55 @@
 
 
 /* dropdown new end */
+
+/* dropdown  start */
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .dropdown-menu a:hover {
+    background-color: #575757;
+}
+.dropdown-menu {
+    display: none;
+    flex-direction: row;
+}
+.dropdown:hover>.dropdown-menu {
+    display: flex;
+}
+.dropdown-item {
+    white-space: nowrap;
+}
+.dropdown-submenu {
+    position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: 0px;
+    border-radius: 0.25rem;
+    display: none;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+.dropdown-menu>li {
+    position: relative;
+}
+.dropdown-submenu {
+    position: relative;
+}
+.dropdown-submenu .dropdown-menu {
+    display: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+}
+.dropdown-submenu:hover .dropdown-menu {
+    display: block;
+}
+.dropdown-menu > .dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0;
+    margin-left: 0;
+}
+/* dropdown  end */
