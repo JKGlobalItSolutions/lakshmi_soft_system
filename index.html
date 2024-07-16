@@ -31,31 +31,30 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- Add these styles to your CSS -->
 <style>
-  .dropdown-content {
+  .dropdown-menu {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    max-height: 200px;
+    overflow-y: auto;
   }
 
-  .dropdown-content a {
+  .dropdown-menu a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
 
-  .dropdown-content a:hover {
+  .dropdown-menu a:hover {
     background-color: #f1f1f1;
   }
 
-  .dropdown:hover .dropdown-content {
+  .dropdown:hover .dropdown-menu {
     display: block;
-  }
-  html {
-    scroll-behavior: smooth;
   }
 </style>
 
@@ -237,16 +236,17 @@
                     we offer comprehensive IT solutions tailored to meet the diverse needs of our clients. 
                     </p>
                     <div class="dropdown">
-                      <a href="#" class="btn btn-primary py-3 px-5 animated slideInDown dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                      <button class="btn btn-primary py-3 px-5 animated slideInDown dropdown-toggle" type="button" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
                         Book Now
-                      </a>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <li><a class="dropdown-item" href="#itsolutions">IT Solutions</a></li>
-                        <li><a class="dropdown-item" href="#homeappliances">Home Appliances</a></li>
-                        <li><a class="dropdown-item" href="#cleaning">Cleaning and Maintenance</a></li>
-                        <li><a class="dropdown-item" href="#facility">Facility Management</a></li>
-                      </ul>
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#itsolutions">IT Solutions</a>
+                        <a class="dropdown-item" href="#homeappliances">Home Appliances</a>
+                        <a class="dropdown-item" href="#cleaning">Cleaning and Maintenance</a>
+                        <a class="dropdown-item" href="#facility">Facility Management</a>
+                      </div>
                     </div>
+                    
                     
                   </div>
                 </div>
