@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Width Dropdown Menu</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .dropdown-menu {
+      width: 100vw;
+      left: 0;
+      right: 0;
+      margin: 0;
+      border-radius: 0;
+    }
+    .mega-content {
+      display: flex;
+      justify-content: space-between;
+    }
+    .dropdown-item {
+      white-space: normal;
+    }
+    .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0; /* Removes the gap so it doesn't close the menu */
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar scroll</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle overflow-auto" data-bs-toggle="dropdown" aria-expanded="false">Our Services</a>
+            <div class="dropdown-menu shadow">
+              <div class="mega-content px-2">
+                <div class="container-fluid">
+                  <div class="row">
+                    <!-- IT Solutions Section -->
+                    <div class="col-12 col-lg-3 py-2">
+                      <a href="#">
+                        <h5>IT Solutions</h5>
+                      </a>
+                      <hr>
+                      <a href="CCTV Instalination.html" class="dropdown-item">CCTV</a>
+                      <a href="Printer Service.html" class="dropdown-item">Printer</a>
+                      <a href="Desktop And Laptop Mother Board Chip Level Service.html" class="dropdown-item">Computer and Laptop</a>
+                      <a href="Xerox Machine Service.html" class="dropdown-item">Xerox Machine</a>
+                      <a href="Hardware And Networking.html" class="dropdown-item">Technical and IT Support</a>
+                      <a href="IT Infrastructure Management.html" class="dropdown-item">IT Infrastructure Management</a>
+                    </div>
+                    <!-- Home Appliances Section -->
+                    <div class="col-12 col-lg-3 py-2">
+                      <a href="#">
+                        <h5>Home Appliances</h5>
+                      </a>
+                      <hr>
+                      <a href="ac.html" class="dropdown-item">AC</a>
+                      <a href="fridge.html" class="dropdown-item">Fridge</a>
+                      <a href="washing_machine.html" class="dropdown-item">Washing Machine</a>
+                      <a href="ro.html" class="dropdown-item">RO</a>
+                      <a href="water_heater.html" class="dropdown-item">Water Heater</a>
+                      <a href="oven.html" class="dropdown-item">Microwave Oven</a>
+                      <a href="Mobile Service.html" class="dropdown-item">Mobile</a>
+                      <a href="ledtv.html" class="dropdown-item">LED TV</a>
+                    </div>
+                    <!-- Cleaning and Maintenance Section -->
+                    <div class="col-12 col-lg-3 py-2">
+                      <a href="#">
+                        <h5>Cleaning and Maintenance</h5>
+                      </a>
+                      <hr>
+                      <a href="electrical.html" class="dropdown-item">Electrical Service</a>
+                      <a href="plumbing.html" class="dropdown-item">Plumbing</a>
+                      <a href="painting.html" class="dropdown-item">Painting</a>
+                      <a href="watertank.html" class="dropdown-item">Water Tank Cleaning</a>
+                      <a href="pestcontrol.html" class="dropdown-item">Pest Control</a>
+                      <a href="garden cleaning.html" class="dropdown-item">Garden Cleaning</a>
+                      <a href="deliveryservice.html" class="dropdown-item">Delivery Service</a>
+                      <a href="bathroom.html" class="dropdown-item">Bathroom</a>
+                      <a href="carrierdelivery.html" class="dropdown-item">Carrier Delivery</a>
+                      <a href="carwash.html" class="dropdown-item">Car Wash</a>
+                      <a href="catering.html" class="dropdown-item">Catering</a>
+                    </div>
+                    <!-- Facility Management Section -->
+                    <div class="col-12 col-lg-3 py-2">
+                      <a href="#">
+                        <h5>Facility Management</h5>
+                      </a>
+                      <hr>
+                      <a href="./facility management/facilitymanagement.html" class="dropdown-item">Facility Management</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
