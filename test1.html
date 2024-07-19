@@ -3,67 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dropdown Menu</title>
+    <title>Service Request Form</title>
+    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .dropdown:hover .dropdown-menu {
-            display: block;
-            margin-top: 0; /* Removes the gap so it doesn't close the menu */
-        }
-    </style>
 </head>
 <body>
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
-            Services
-        </button>
-        <div class="dropdown-menu shadow" aria-labelledby="dropdownMenuButton">
-            <div class="mega-content px-2">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12 col-sm-6 col-md-6 col-lg-6 py-2">
-                            <a href="#">
-                                <h5>Technical and IT Support</h5>
-                            </a>
-                            <hr>
-                            <div class="row">
-                                <div class="col">
-                                    <a href="CCTV Instalination.html" class="dropdown-item">CCTV</a>
-                                    <a href="Desktop And Laptop Mother Board Chip Level Service.html" class="dropdown-item">Desktop and Laptop</a>
-                                    <a href="Printer Service.html" class="dropdown-item">Printer</a>
-                                    <a href="Xerox Machine Service.html" class="dropdown-item">Xerox Machine</a>
-                                    <a href="Hardware And Networking.html" class="dropdown-item">Technical and IT Support</a>
-                                    <a href="IT Infrastructure Management.html" class="dropdown-item">IT Infrastructure Management</a>
-                                    <a href="Mobile Service.html" class="dropdown-item">Mobile</a>
-                                    <a href="ledtv.html" class="dropdown-item">LED TV</a>
-                                </div>
-                            </div>
+    <!-- Button Container -->
+    <div class="container text-center mt-5">
+        <div class="button-container">
+            <button id="book" type="button" class="btn btn-primary" data-toggle="modal" data-target="#serviceRequestModal">
+                Enquire Now
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="serviceRequestModal" tabindex="-1" role="dialog" aria-labelledby="serviceRequestModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="serviceRequestModalLabel">Service Request Form</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="serviceRequestForm">
+                        <div class="form-group">
+                            <label for="businessName">Business Name</label>
+                            <input type="text" class="form-control" id="businessName" placeholder="Enter business name" required>
                         </div>
-                        <div class="col-12 col-sm-6 col-md-6 col-lg-6 py-2">
-                            <a href="#">
-                                <h5>Home Appliances</h5>
-                            </a>
-                            <hr>
-                            <div class="row">
-                                <div class="col">
-                                    <a href="ac.html" class="dropdown-item">AC</a>
-                                    <a href="fridge.html" class="dropdown-item">Fridge</a>
-                                    <a href="washing_machine.html" class="dropdown-item">Washing Machine</a>
-                                    <a href="water_heater.html" class="dropdown-item">Water Heater</a>
-                                    <a href="oven.html" class="dropdown-item">Microwave Oven</a>
-                                    <a href="electrical.html" class="dropdown-item">Electrical Service</a>
-                                    <a href="ro.html" class="dropdown-item">RO</a>
-                                </div>
-                            </div>
+                        <div class="form-group">
+                            <label for="businessNumber">Business Number</label>
+                            <input type="text" class="form-control" id="businessNumber" placeholder="Enter business number" required>
                         </div>
-                    </div>
+                        <div class="form-group">
+                            <label for="service">Service</label>
+                            <input type="text" class="form-control" id="service" placeholder="Enter service" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="appointmentStartDate">Appointment Start Date</label>
+                            <input type="date" class="form-control" id="appointmentStartDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="appointmentEndDate">Appointment End Date</label>
+                            <input type="date" class="form-control" id="appointmentEndDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" class="form-control" id="address" placeholder="Enter address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea class="form-control" id="description" rows="3" placeholder="Enter description" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
